@@ -94,7 +94,7 @@ def generate_reply(prompt, message):
 
 
 # model_engine = "text-davinci-003"
-openai.api_key = "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"
+openai.api_key = "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"
 bot = telebot.TeleBot('6292843670:AAESjXj9uCeazqD5opLkEZ4Ta4zk0gpuuDc')
 word = "ника"
 bot_id = bot.get_me().id
