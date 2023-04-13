@@ -1,10 +1,21 @@
 import telebot
+from dotenv import load_dotenv
 import openai
+import os
 import datetime
 from collections import defaultdict
 import random
 import time
 import pickle
+
+load_dotenv()
+
+
+openai.api_key = os.getenv('OPENAI_TOKEN')
+bot = telebot.TeleBot(os.getenv('TELEGRAM_TOKEN'))
+word = "ника"
+bot_id = bot.get_me().id
+chat_names = []
 
 
 def debounce(seconds=300):
@@ -94,11 +105,6 @@ def generate_reply(prompt, message):
 
 
 # model_engine = "text-davinci-003"
-openai.api_key = "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"
-bot = telebot.TeleBot('6292843670:AAESjXj9uCeazqD5opLkEZ4Ta4zk0gpuuDc')
-word = "ника"
-bot_id = bot.get_me().id
-chat_names = []
 
 
 def load_users():
